@@ -1,0 +1,239 @@
+body {
+  overflow-x: hidden;
+  background-color: white;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.navbar {
+  background-color: #3B8F7C;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 3px;
+}
+
+.nav-link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 3px;
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #53BF82, #4fe089);
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.nav-link:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.typewrite {
+  color: white;
+  background-color: #3B8F7C;
+  text-decoration: none;
+}
+
+.profile, .section2, .section3 {
+  text-align: center;
+}
+
+.contactme {
+  text-indent: 300px;
+}
+
+.Educational, .Skills, .Interest {
+  color: white;
+  background-color: #3B8F7C;
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 3px;
+}
+
+.newborder {
+  background-color: #3B8F7C;
+  border-radius: 40%;
+  padding: 6px;
+  background: linear-gradient(90deg, #53BF82, #3B8F7C, #53BF82);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 3px;
+}
+
+.newborder:nth-child(2) {
+  background-color: #3B8F7C;
+  padding: 6px;
+  background: linear-gradient(90deg, #53BF82, #3B8F7C, #53BF82);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 3px;
+}
+
+.footer {
+  background-color: #3B8F7C;
+  background: linear-gradient(90deg, #53BF82, #3B8F7C, #53BF82);
+  color: white;
+  text-align: center;
+}
+
+.fb {
+  --transform-speed: 150ms;
+  position: relative;
+  left: -8%;
+  top: 130px;
+  max-width: 5rem;
+  margin-inline: auto;
+}
+
+.linkedin {
+  --transform-speed: 150ms;
+  position: relative;
+  left: -37%;
+  top: 60px;
+  max-width: 5rem;
+  margin-inline: auto;
+}
+
+.twitter {
+  --transform-speed: 150ms;
+  position: relative;
+  left: -75%;
+  top: 0px;
+  max-width: 5rem;
+  margin-inline: auto;
+}
+
+.fb_container, .linkedin_container, .twitter_container {
+  aspect-ratio: 1 / 1.3;
+  display: grid;
+  align-items: end;
+  border-radius: 0 0 100vw 100vw;
+  overflow: hidden;
+  transition: transform var(--transform-speed) ease;
+}
+
+.fb_container:hover {
+  transform: scale(1.5);
+}
+
+.linkedin_container:hover {
+  transform: scale(1.5)
+}
+
+.twitter_container:hover {
+  transform: scale(1.5)
+}
+
+.fb_circle, .linkedin_circle, .twitter_circle {
+  position: absolute;
+  inset: auto 0 0;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 80%;
+  border-radius: 50%;
+  margin-inline: auto;
+}
+
+.fb_icon, .linkedin_icon, .twitter_icon {
+  position: relative;
+  width: 80%;
+  z-index: 2;
+  transform: scale(1.2);
+  margin-inline: auto;
+  transition: transform calc(var(--transform-speed) * 1.2) ease;
+}
+
+.fb_container:hover .fb_icon {
+  transform: 
+    scale(1.1)
+    translateY(-1rem);
+}
+
+.linkedin_container:hover .linkedin_icon {
+  transform: 
+    scale(1.1)
+    translateY(-1rem);
+}
+
+.twitter_container:hover .twitter_icon {
+  transform: 
+    scale(1.1)
+    translateY(-1rem);
+}
+
+
+#root {
+  width: 20%;
+}
+
+.person {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.school {
+  width: 30%;
+  position: relative;
+  left: 150px;
+}
+
+.logo {
+  width: 30%;
+  position: relative;
+  left: 70px;
+}
+
+.picture {
+  width: 30%;
+  position: relative;
+  left: 150px;
+}
+
+.cat {
+  width: 75px;
+  height: 35px;
+  margin: 0px auto 0;
+}
+
+.move {
+  animation: move-animation 5s 1;
+}
+
+.walk-and-sit {
+  animation: walk-animation 5s steps(12) 1, sit-animation 3s 2s steps(6) 1;
+  background: url("img/cat_tiles2.png") -75px -188px no-repeat;
+}
+
+@keyframes walk-animation {
+    from {
+      background-position: 0 0;
+    }
+  
+    to {
+      background-position: 0 -450px;
+    }
+}
+
+@keyframes sit-animation {
+  from {
+    background-position: -75px 0;
+  }
+
+  to {
+    background-position: -75px -225px;
+  }
+}
+  
+@keyframes move-animation {
+    from {
+      margin-left: 55%;
+    }
+  
+    to {
+      margin-left: 0;
+    }
+}
